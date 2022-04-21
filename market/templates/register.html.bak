@@ -4,6 +4,7 @@
 <form method="POST" class="form-register" style="color: rgb(236, 59, 5);">
   {{form.hidden_tag()}}
   <div class="container">
+    <center><img class="mb-4" src="https://res.cloudinary.com/jimshapedcoding/image/upload/v1597332609/android-icon-192x192_ove2a7.png" alt=""></center>
   <center>  <h1 style="color: black;">فرم ثبت نام در فروشگاه</h1> </center>
   <hr><center>
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-left-square-fill" viewBox="0 0 16 16">
