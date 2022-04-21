@@ -1,0 +1,43 @@
+{% extends 'Base.html' %}
+{% block content %}
+<font face = "Calibri"> 
+<form method="POST" class="form-register" style="color: rgb(236, 59, 5);">
+  {{form.hidden_tag()}}
+  <div class="container">
+    <center><img class="mb-4" src="https://res.cloudinary.com/jimshapedcoding/image/upload/v1597332609/android-icon-192x192_ove2a7.png" alt=""></center>
+  <center>  <h1 style="color: black;">فرم ثبت نام در فروشگاه</h1> </center>
+  <hr><center>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-left-square-fill" viewBox="0 0 16 16">
+      <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm8.096-10.803L6 9.293V6.525a.5.5 0 0 0-1 0V10.5a.5.5 0 0 0 .5.5h3.975a.5.5 0 0 0 0-1H6.707l4.096-4.096a.5.5 0 1 0-.707-.707z"/>
+    </svg>
+  {{ form.username.label() }}
+  {{ form.username(class="form-control"  , placeholder=":لطفا نام کاربری خود را وارد نمایید") }}
+
+  {{ form.Email.label() }}
+  {{ form.Email(class="form-control" , placeholder=":لطفا ایمیل  خود را وارد نمایید") }}
+
+  {{ form.password1.label() }}
+  {{ form.password1(class="form-control" , placeholder=":لطفا رمز مناسب وارد نمایید") }}
+
+  {{ form.password2.label() }}
+  {{ form.password2(class="form-control" , placeholder=":لطفارمز خود را تکرار نمایید") }}
+
+  {{ form.Home_Address.label() }}
+  {{ form.Home_Address(class="form-control" , placeholder=":لطفاآدرس منزل خود را وارد نمایید") }}
+
+  {{ form.Coin.label() }}
+  {{ form.Coin(class="form-control" , placeholder=":لطفا موجودی خود را وارد نمایید") }}
+
+  {{ form.Phone.label() }}
+  {{ form.Phone(class="form-control" , placeholder=":لطفا تلفن  خود را وارد نمایید") }}
+
+  <br>
+  {{ form.Submit(class="btn btn-lg btn-block btn-primary") }} 
+</center></font>
+</div>
+
+{% endblock %}
+
+
+
+

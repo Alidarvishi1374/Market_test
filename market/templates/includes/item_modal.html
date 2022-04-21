@@ -1,0 +1,57 @@
+<style>
+  .modal-content{
+     background-color: rgb(245, 248, 244);
+  }
+</style>
+<!-- Modal -->
+<div class="modal fade" id="Modal-MoreInfo-{{item.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h5 class="modal-title" id="exampleModalLabel">
+          {{item.name}}
+       </h5>
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+       </button>
+     </div>
+     <div class="modal-body">
+        {{item.Description}}
+     </div>
+     <div class="modal-footer">
+       <a href="{{url_for('Market_page')}}" class="btn btn-secondary">Close</a>
+     </div>
+   </div>
+ </div>
+</div>
+
+<!--/////////////////////////////////////////-->
+<!--(purchase-modal)-->
+<div class="modal fade" id="Modal-PurchaseItem-{{item.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+           {{item.name}}
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <form method="POST">
+           {{form_purchase.hidden_tag()}}
+           <h3 class="text-center">آیا از خرید این ایتم با قیمت {{item.price}} اطمینان دارید؟
+           </h1>
+           <input id="form_purchase" name="form_purchase" type="hidden" value="{{item.name}}">
+           {{form_purchase.Submit(class = "btn btn-outline-success btn-block")}}
+         </form>
+      </div>
+      <div class="modal-footer">
+        <a href="{{url_for('Market_page')}}" class="btn btn-secondary">Close</a>
+      </div>
+    </div>
+  </div>
+ </div>
+
+

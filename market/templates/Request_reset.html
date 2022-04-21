@@ -1,0 +1,24 @@
+{% extends 'Base.html' %}
+{% block content %}
+<font face = "Calibri"> 
+<form method="POST" class="form-register" style="color: rgb(236, 59, 5);">
+  {{form.hidden_tag()}}
+  <div class="container">
+      <br>
+      <br>
+  <center>  <h1 style="color: black;"> ارسال پیامک</h1> </center>
+  <hr><center>
+
+  {{ form.Phone.label() }}
+  {{ form.Phone(class="form-control" , placeholder=":لطفا شماره  تلفن خود را وارد نمایید") }}
+
+  <br>
+  {{ form.Submit(class="btn btn-lg btn-block btn-primary") }} 
+</center></font>
+</div>
+
+{% endblock %}
+
+
+
+

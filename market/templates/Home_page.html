@@ -1,0 +1,18 @@
+{% extends 'Base.html' %}
+{% block content %}
+<div>
+    <h1 class="text-center" style=" color: rgb(3, 3, 15)"><font size = "10" face = "Calibri">به فروشگاه ما خوش آمدید</font>
+          </h1>
+    <h1 class="text-center" style="color: rgb(8, 8, 15)"><font size = "10" face = "Calibri">برای مطالعه در مورد فروشگاه ما به لینک زیر مراجعه نمایید</font></h1>
+    <center>
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+      </svg>
+    </center>
+    <h2 class="text-center"><font face = "Calibri" >
+        <a class="btn brn-primary" href="{{url_for('Wellcom')}}" style="color: red ">درباره ما</a>
+    </font>  
+    </h2>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+<div class="modal fade" id="Modal-SellItem-{{owned_item.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+             {{owned_item.name}}
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+           <form method="POST">
+             {{form_sell.hidden_tag()}}
+             <h3 class="text-center">آیا از حذف این ایتم با قیمت {{owned_item.price}} اطمینان دارید؟
+             </h1>
+             <input id="form_sell" name="form_sell" type="hidden" value="{{owned_item.name}}">
+             {{form_sell.Submit(class = "btn btn-outline-success btn-block")}}
+           </form>
+        </div>
+        <div class="modal-footer">
+          <a href="{{url_for('Market_page')}}" class="btn btn-secondary">Close</a>
+        </div>
+      </div>
+    </div>
+   </div>

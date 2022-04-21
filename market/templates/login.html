@@ -1,0 +1,75 @@
+{% extends 'Base.html' %}
+
+
+{% block content%}
+
+
+<!DOCTYPE html> 
+<html> 
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Login Page </title>
+<style> 
+    Body {
+      font-family: Calibri, Helvetica, sans-serif;
+      background-color: rgb(143, 60, 139);
+    }
+    button { 
+           background-color: #a7e21e; 
+           width: 100%;
+            color: rgb(85, 115, 196); 
+            padding: 15px; 
+            margin: 10px 0px; 
+            border: none; 
+            cursor: pointer; 
+             } 
+     input[type=text], input[type=password] { 
+            width: 100%; 
+            margin: 8px 0;
+            padding: 12px 20px; 
+            display: inline-block; 
+            border: 2px solid rgb(72, 121, 212); 
+            box-sizing: border-box; 
+        }
+     button:hover { 
+            opacity: 0.7; 
+        } 
+      .cancelbtn { 
+            width: auto; 
+            padding: 10px 18px;
+            margin: 10px 5px;
+        } 
+          
+       
+     .container { 
+            padding: 25px; 
+            background-color: rgb(30, 10, 209);
+        } 
+    </style> 
+    </head>  
+<body>  
+    <center><img class="mb-4" width="300" src="https://bayanbox.ir/view/8827641577562253092/%D8%AE%D9%88%D8%B4-%D8%A2%D9%85%D8%AF%DB%8C%D8%AF.png" alt=""></center>
+
+    <center> <h1 style="color: rgb(4, 3, 8);">  نام کاربری و رمز عبور خود را وارد نمایید  </h1> </center> 
+    <form method="POST" class="form-register" style="color: rgb(241, 229, 226);">
+        {{form.hidden_tag()}}
+        <div class="container"> 
+            <label>:نام کاربری</label> 
+            <input type="text" placeholder=":نام کاربری را وارد نمایید" name="username">
+            <br>
+            <label>:رمز عبور</label> 
+            <input type="password" placeholder=":رمز عبور را وارد نمایید" name="password" required>
+            <button type="submit" style="color: black;">ورود</button> 
+            <input type="checkbox" checked="checked" > مرا به خاطر بسپار 
+            <button type="button" class="cancelbtn"><a href="{{url_for('Home_page')}}" style="color: black;">انصراف</a></button>
+            <p><a href="{{url_for('reset_req')}}" style="color: rgb(247, 238, 238);"> رمز خود را فراموش کرده ام? </a> </p>
+        </div> 
+    </form>   
+</body>   
+</html>
+
+
+ 
+
+
+{% endblock %}
